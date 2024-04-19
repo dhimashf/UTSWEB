@@ -1,8 +1,8 @@
-import "./DataDosenPembimbing.css"
 import React from 'react';
+import "./DataDosenPembimbing.css"
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faUsers, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faUsers, faSignOutAlt, faTrash, faPen, faSearch, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 function DataDosenPembimbing() {
   return (
@@ -29,14 +29,84 @@ function DataDosenPembimbing() {
       <div className="content">
         <div className="header">
           <div className="welcome">
-            Welcome back, Fulan !!!
+            Hello, Fulan !!!
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
             <div className="Koordinator-TA"><Link to="#"><FontAwesomeIcon icon={faUser} /><span>Koordinator TA</span></Link></div>
           </div>  
         </div>
-        {/* Tambahkan komponen lain di sini */}
-      </div>
+        <div className="main-content">
+        <div class="search-container">
+        <div className="search-container">
+            <div className="search">Data Dosen Pembimbing</div>
+            <FontAwesomeIcon icon={faSearch} className="search-icon" />
+            <input type="search" placeholder="Search..." />
+        </div>
+        </div>
+          <div className="table-container">
+        <div className="add-button">
+          <Link to="/AddPembimbing" className="add-link">
+            <button className="add-button">Add</button>
+          </Link>
+        </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Dosen</th>
+                  <th>NIDN</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Kuota</th>
+                  <th>Keahlian</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Fulan</td>
+                  <td>12345</td>
+                  <td>Laki-Laki</td>
+                  <td>6</td>
+                  <td>Database</td>
+                  <td>
+                    <Link to="/AddPembimbing"><FontAwesomeIcon icon={faPen} /></Link>
+                    <Link to="/"><FontAwesomeIcon icon={faTrash} /></Link>
+                    <Link to="/DetailPembimbing"><FontAwesomeIcon icon={faInfoCircle} /></Link>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Fulan</td>
+                  <td>12345</td>
+                  <td>Laki-Laki</td>
+                  <td>6</td>
+                  <td>Database</td>
+                  <td>
+                    <Link to="/AddPembimbing"><FontAwesomeIcon icon={faPen} /></Link>
+                    <Link to="/"><FontAwesomeIcon icon={faTrash} /></Link>
+                    <Link to="/DetailPembimbing"><FontAwesomeIcon icon={faInfoCircle} /></Link>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>  
+          </div>
+          <footer className="footer">
+            <div className="footer-info">
+              <p>Showing 2 Out Of 25 Entries</p>
+            </div>
+            <div className="pagination">
+              <a href="#">1</a>
+              <a href="#" className="active">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+            </div>
+          </footer>
+
+        </div>
     </div>
+  </div>
   );
 }
 

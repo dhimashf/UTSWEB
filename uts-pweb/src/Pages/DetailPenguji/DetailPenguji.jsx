@@ -1,10 +1,10 @@
 import React from 'react';
-import "./DataDosenPenguji.css"
+import "./DetailPenguji.css"
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faUsers, faSignOutAlt, faTrash, faPen, faSearch, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faUsers, faSignOutAlt, faTrash, faPen, faSearch } from '@fortawesome/free-solid-svg-icons';
 
-function DataDosenPenguji() {
+function DetailPenguji() {
   return (
     <div className="wrapper">
       <div className="sidebar">
@@ -37,63 +37,73 @@ function DataDosenPenguji() {
         <div className="main-content">
         <div class="search-container">
         <div className="search-container">
-            <div className="search">Data Dosen Penguji</div>
+            <div className="search">Fulan S.T.,M.T.</div>
             <FontAwesomeIcon icon={faSearch} className="search-icon" />
             <input type="search" placeholder="Search..." />
         </div>
+
         </div>
           <div className="table-container">
-        <div className="add-button">
-          <Link to="/AddPenguji" className="add-link">
-            <button className="add-button">Add</button>
-          </Link>
-        </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Nama Dosen</th>
-                  <th>NIDN</th>
-                  <th>Jenis Kelamin</th>
-                  <th>Kuota</th>
-                  <th>Keahlian</th>
-                  <th>Aksi</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Fulan</td>
-                  <td>12345</td>
-                  <td>Laki-Laki</td>
-                  <td>6</td>
-                  <td>Database</td>
-                  <td>
-                    <Link to="/AddPenguji"><FontAwesomeIcon icon={faPen} /></Link>
-                    <Link to="/"><FontAwesomeIcon icon={faTrash} /></Link>
-                    <Link to="/DetailPenguji"><FontAwesomeIcon icon={faInfoCircle} /></Link>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Fulan</td>
-                  <td>12345</td>
-                  <td>Laki-Laki</td>
-                  <td>6</td>
-                  <td>Database</td>
-                  <td>
-                    <Link to="/AddPenguji"><FontAwesomeIcon icon={faPen} /></Link>
-                    <Link to="/"><FontAwesomeIcon icon={faTrash} /></Link>
-                    <Link to="/DetailPenguji"><FontAwesomeIcon icon={faInfoCircle} /></Link>
-                  </td>
-                </tr>
-                
-              </tbody>
-            </table>  
+          <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Mahasiswa</th>
+              <th>NIM</th>
+              <th>Jenis Kelamin</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Fulan</td>
+              <td>12345</td>
+              <td>Laki-Laki</td>
+              <td>Fulan@gmail.com</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Fulan</td>
+              <td>12345</td>
+              <td>Laki-Laki</td>
+              <td>Fulan@gmail.com</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>3</td>
+              <td>Fulan</td>
+              <td>12345</td>
+              <td>Laki-Laki</td>
+              <td>Fulan@gmail.com</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>4</td>
+              <td>Fulan</td>
+              <td>12345</td>
+              <td>Laki-Laki</td>
+              <td>Fulan@gmail.com</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>5</td>
+              <td>Fulan</td>
+              <td>12345</td>
+              <td>Laki-Laki</td>
+              <td>Fulan@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
           </div>
           <footer className="footer">
             <div className="footer-info">
-              <p>Showing 2 Out Of 25 Entries</p>
+              <p>Showing 5 Out Of 25 Entries</p>
             </div>
             <div className="pagination">
               <a href="#">1</a>
@@ -101,6 +111,11 @@ function DataDosenPenguji() {
               <a href="#">3</a>
               <a href="#">4</a>
               <a href="#">5</a>
+            <div className="kembali">
+                <Link to="/datadosenpenguji">
+                    <span>Kembali</span>
+                </Link>
+            </div>
             </div>
           </footer>
 
@@ -110,4 +125,4 @@ function DataDosenPenguji() {
   );
 }
 
-export default DataDosenPenguji;
+export default DetailPenguji;
